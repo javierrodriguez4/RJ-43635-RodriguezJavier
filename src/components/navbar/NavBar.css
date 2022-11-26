@@ -1,0 +1,19 @@
+.NavBar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar_logo img{
+    width: 150px;
+    margin: 5px;
+}
+
+.navbar_btn button{
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
