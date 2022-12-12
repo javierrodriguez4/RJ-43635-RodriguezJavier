@@ -1,16 +1,40 @@
 import {Link} from "react-router-dom"
 import "./Item.css"
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+
 
 const Item = ({element}) => {
 
 
   return (
-    <div className="card">
-      <h2>{element.name}</h2>
-      <img src={element.img} alt="" />
-      <h3>${element.price}</h3>
-      <Link to={`/itemDetail/${element.id}`}>Ver detalle</Link>
-    </div>
+     <Card sx={{ maxWidth: 345}}>
+     <CardMedia
+       component="img"
+       alt="green iguana"
+       height="180"
+       image={element.img}
+     />
+     <CardContent>
+       <Typography gutterBottom variant="h5" component="div">
+       {element.name}
+       </Typography>
+       <Typography variant="body2" color="text.secondary">
+         {element.description}
+       </Typography>
+       <Typography variant="body2" color="text.secondary">
+         {element.price}
+       </Typography>
+     </CardContent>
+     <CardActions style={{display: "flex", justifyContent: "center"}}>
+       <Button size="small" variant="outlined" ><Link to={`/itemDetail/${element.id}`}>Ver detalle</Link></Button>
+     </CardActions>
+   </Card>
   );
 };
 
