@@ -6,8 +6,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-
 
 const Item = ({element}) => {
 
@@ -28,7 +26,7 @@ const Item = ({element}) => {
          {element.description}
        </Typography>
        <Typography variant="body2" color="text.secondary">
-         {element.price}
+         ${element.price}
        </Typography>
      </CardContent>
      <CardActions style={{display: "flex", justifyContent: "center"}}>
