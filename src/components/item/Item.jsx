@@ -23,10 +23,7 @@ const Item = ({element}) => {
        {element.name}
        </Typography>
        <Typography variant="body2" color="text.secondary">
-         {element.description}
-       </Typography>
-       <Typography variant="body2" color="text.secondary">
-         ${element.price}
+         Precio: ${element.price}
        </Typography>
      </CardContent>
      <CardActions style={{display: "flex", justifyContent: "center"}}>
