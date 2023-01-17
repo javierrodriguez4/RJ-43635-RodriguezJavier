@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-
 import "./ItemListContainer.css"
 import { products } from "../../productsMock"
 import { ItemList } from "../itemList/ItemList"
@@ -33,8 +32,8 @@ export const ItemListContainer = () => {
   }, [categoryName])
 
   return (
-    <div>
-      <ItemList items={items} />
+    <div className="Background">
+      <ItemList items={items}/>
     </div>
   )
 }

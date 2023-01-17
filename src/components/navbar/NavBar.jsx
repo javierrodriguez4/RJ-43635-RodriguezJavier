@@ -1,4 +1,5 @@
 import { CartWidget } from '../cartwidget/CartWidget'
+import { DarkMode } from '../darkMode/DarkMode'
 import './NavBar.css'
 import {Link} from "react-router-dom"
 import Stack from '@mui/material/Stack';
@@ -27,6 +28,9 @@ export const NavBar = ()=>{
             </Button>
             <div>
                 <CartWidget/>
+            </div>
+            <div>
+                <DarkMode/>
             </div>
         </div>
     )
