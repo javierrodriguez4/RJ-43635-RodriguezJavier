@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { products } from '../../productsMock'
 import { useParams } from "react-router-dom"
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -27,6 +26,7 @@ export const ItemDetail = ( { product } ) => {
 
     const quantity = getQuantityById( product.id )
 
+
   return (
     <div className='card'>
          <Card sx={{ maxWidth: 600 }} >
@@ -49,7 +49,7 @@ export const ItemDetail = ( { product } ) => {
         <Button size="small">Agregar al carrito</Button>
       </CardActions>
     </Card>
-    <ItemCount onAdd={onAdd} stock={product.stock}/>
+    <ItemCount onAdd={onAdd} stock={product.stock} initial={quantity}/>
     </div>
   )
 }

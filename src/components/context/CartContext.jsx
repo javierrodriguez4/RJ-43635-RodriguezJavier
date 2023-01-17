@@ -14,7 +14,7 @@ export const CartContextProvider = ( {children} ) => {
             if(product.id === element.id){
                 let newProduct = {
                     ...product,
-                    quantity: product.quantity + element.quantity
+                    quantity: element.quantity
                 }
                 return newProduct
             }else{
@@ -45,11 +45,26 @@ export const CartContextProvider = ( {children} ) => {
     return product?.quantity
 
    }
+
+   const getTotalPrice = ()=>{
+    const total = cart.reduce( (acc, element)=>{
+        return acc + (element.price * element.quantity)
+    }, 0 )
+    return total
+   }
+
+const deleteProductById = (id)=>{
+    const newArray = cart.filter ( product => product.id !== id )
+    setCart( newArray )
+}
+
    const data = {
         cart,
         addToCart,
         clearCart,
-        getQuantityById
+        getQuantityById,
+        getTotalPrice,
+        deleteProductById
     }
 
 
