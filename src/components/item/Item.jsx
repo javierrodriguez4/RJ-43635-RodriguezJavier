@@ -14,7 +14,7 @@ const Item = ({element}) => {
      <Card sx={{ maxWidth: 345}}>
      <CardMedia
        component="img"
-       alt="green iguana"
+       alt={element.name}
        height="180"
        image={element.img}
      />
@@ -27,7 +27,7 @@ const Item = ({element}) => {
        </Typography>
      </CardContent>
      <CardActions style={{display: "flex", justifyContent: "center"}}>
-       <Button size="small" variant="outlined" ><Link to={`/itemDetail/${element.id}`}>Ver detalle</Link></Button>
+       <Button size="small" variant="contained" ><Link to={`/itemDetail/${element.id}`}>Ver detalle</Link></Button>
      </CardActions>
    </Card>
   );
