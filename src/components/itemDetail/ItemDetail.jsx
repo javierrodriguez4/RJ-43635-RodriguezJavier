@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import "./ItemDetail.css"
 import { useParams } from "react-router-dom"
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -44,10 +45,6 @@ export const ItemDetail = ( { product } ) => {
           {product.description}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Comprar</Button>
-        <Button size="small">Agregar al carrito</Button>
-      </CardActions>
     </Card>
     <ItemCount onAdd={onAdd} stock={product.stock} initial={quantity}/>
     </div>

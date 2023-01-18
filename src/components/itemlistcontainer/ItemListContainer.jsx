@@ -1,3 +1,6 @@
+import * as React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 import { useState, useEffect } from "react"
 import "./ItemListContainer.css"
 import { ItemList } from "../itemList/ItemList"
@@ -58,9 +61,9 @@ export const ItemListContainer = () => {
   }, [categoryName])
 
   return (
-    <div className="Background">
+    <div className='container'>
       {
-        isLoading ? <h2>cargando productos</h2> : <ItemList items={items}/>
+        isLoading ? <CircularProgress size={100} /> : <ItemList items={items}/>
       }
     </div>
   )
