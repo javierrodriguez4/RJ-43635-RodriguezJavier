@@ -42,25 +42,7 @@ export const Cart = () => {
     }
   }, [orderId])
 
-  const limpiar = () => {
-    swal({
-      title: "Seguro quieres borrar todo el carrito?",
-      text: "Una vez que lo hagas no podras recuperar la informacion!",
-      icon: "warning",
-      buttons: ["no", "si"],
-      dangerMode: true,
-    }).then((willDelete) => {
-      if (willDelete) {
-        swal("Carrito borrado con exito!", {
-          icon: "success",
-        })
-        clearCart()
-      } else {
-        swal("Cancelaste la operacion")
-      }
-    })
-  }
-
+  
   if (orderId) {
     return (
       <div>
@@ -101,7 +83,7 @@ export const Cart = () => {
               <Button variant="contained" onClick={openForm}>
                 Comprar
               </Button>
-              <Button onClick={() => limpiar()} variant="contained">
+              <Button onClick={() => clearCart()} variant="contained">
                 Vaciar carrito
               </Button>
             </div>
