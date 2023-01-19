@@ -6,12 +6,12 @@ import { CartContext } from '../context/CartContext'
 
 export const CartWidget = () => {
 
-  const { cart } = useContext(CartContext)
+  const { cart, countProducts } = useContext(CartContext)
 
   return (
     <Link to="/cart" className='cartWidget'>
       <AiOutlineShoppingCart size={50} />
-      <h2>{cart.length}</h2>
+      <h2>{countProducts()}</h2>
     </Link>
   )
 }

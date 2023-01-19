@@ -58,15 +58,26 @@ const deleteProductById = (id)=>{
     setCart( newArray )
 }
 
+const countProducts = ()=>{
+   const productos = cart.map( prod => prod.quantity)
+
+   const total = productos.reduce((acumulador , valoractual) => 
+   acumulador + valoractual
+   , 0);
+   return total 
+}
+
+console.log(countProducts())
+
    const data = {
         cart,
         addToCart,
         clearCart,
         getQuantityById,
         getTotalPrice,
-        deleteProductById
+        deleteProductById,
+        countProducts
     }
-
 
   return (
     <CartContext.Provider value={ data }>
