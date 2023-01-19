@@ -15,11 +15,11 @@ export const CartItem = ({ item }) => {
   const { deleteProductById } = useContext( CartContext )
 
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card sx={{ maxWidth: 800 }}>
       <CardMedia
         component="img"
         alt={item.name}
-        height="150"
+        height="400"
         image= {item.img}
       />
       <CardContent>
@@ -28,6 +28,9 @@ export const CartItem = ({ item }) => {
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {item.description}
+          <Typography variant="body2" color="text.secondary">
+          ${item.price}
+        </Typography>
         </Typography>
       </CardContent>
     </Card>

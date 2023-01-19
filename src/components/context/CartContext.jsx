@@ -67,7 +67,6 @@ const countProducts = ()=>{
    return total 
 }
 
-console.log(countProducts())
 
    const data = {
         cart,
